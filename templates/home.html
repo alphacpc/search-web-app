@@ -11,20 +11,179 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam omnis fugiat ut sapiente animi distinctio fuga, aliquam at assumenda aliquid commodi minima repellendus id vel eius dignissimos facilis quis eligendi.
         Consectetur cumque ipsum error! Atque quidem, tempora illo minima modi sit mollitia? Rerum, eaque incidunt eum temporibus, suscipit, rem earum assumenda commodi repudiandae in eos cum provident quasi doloremque qui!</p>
         <form method="POST" >
-            <input type="text" placeholder="Recherche de vols...">
+            <input type="search" placeholder="Recherche de vols...">
         </form>
     </div>
 </div>
 
 <div class="divBody">
     <div class="divFilters">
-        <h2>Filters</h2>
+        <h2>Filtres</h2>
+
+        <div class="category">
+            <h4>Par Compagnies</h4>
+            <div>
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">United Air Lines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">American Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">US Airways Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Frontier Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">JetBlue Airways</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Skywest Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Alaska Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Spirit Air Lines</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Southwest Airlines Co.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Delta Air Lines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Atlantic Southeast Airlines</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Hawaiian Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">American Eagle Airlines Inc.</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Virgin America</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h4>Dans certaines villes</h4>
+            <div>
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">New York</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Los Angeles</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Chicago</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Seattle</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Washington DC</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Boston</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Las Vegas</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Miami</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h4>Par Jours</h4>
+            <div>
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Lundi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Mardi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Mercredi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Jeudi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Vendredi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Samedi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="" value="nice">
+                    <label for="">Dimanche</label>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="divVolContainer">
-        <h2>Airpline</h2>
 
         <div class="divVols">
-            {% for i in range(10) %}
+            {% for i in range(15) %}
             <div class="divVolItem">
                 <div class="divImage">
                     <img src="{{ url_for('static', filename='images/delta.png')}}" alt="vols">

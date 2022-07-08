@@ -41,7 +41,7 @@
 }
 
 .divInfos{
-    background: rgb(8, 19, 140) !important;
+    /* background: rgb(8, 19, 140) !important; */
 }
 
 .divInfos h1{
@@ -79,22 +79,23 @@
 /* ***** DIV BODY***** */
 /* ******************* */
 .divBody{
-    background: cyan;
-    height: 30vh;
+    background: #F0EBE3; 
+    /* height: 30vh; */
     padding: 50px 20px;
     display: flex;
 }
 
 .divBody .divFilters{
-    background: yellow;
+    background: #FFF;
     flex: 1;
     padding: 20px;
+    border-radius: 8px;
 }
 
 .divBody .divVolContainer{
-    background: rgb(255, 145, 0);
+    /* background: rgb(255, 145, 0); */
     flex: 4 ;
-    padding: 20px;
+    padding: 0 20px;
 
 }
 
@@ -102,7 +103,6 @@
 .divVolContainer .divVols{
     display: flex;
     flex-wrap: wrap;
-    background: pink;
 }
 
 
@@ -111,6 +111,7 @@
     background: #FFF;
     margin-bottom: 20px;
     margin-right: 20px;
+    border-radius: 8px;
 }
 
 .divVolItem:nth-child(5n){
@@ -128,17 +129,21 @@
 }
 
 .divVolItem .volInformations{
-    background: #f05;
-    padding: 0 10px;
+    /* background: rgb(243, 243, 243); */
+    padding: 15px 10px;
 }
 
+
 .divVolItem .divTravel{
-    background: rgb(35, 169, 35);
+    background: #8cff00;
     display: flex;
     align-items: center;
     height: 40px;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    padding: 0 5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 #000000c5;
 }
 
 .divVolItem .divTravel img{
@@ -147,7 +152,6 @@
 
 .divVolItem .timers{
     display: flex;
-    background: yellow;
     justify-content: space-between;
     /* padding: 0 10px; */
 }
@@ -160,6 +164,11 @@
 
 }
 
+.divVolItem .timers .timer div h4{
+    color: #464645;
+    font-size: 14px;
+}
+
 .divVolItem .timers .timer div span{
     letter-spacing: 1px;
     margin-top: 5px;
@@ -167,15 +176,15 @@
 }
 
 .divVolItem .volInformations p{
-    background: wheat;
     text-align: end;
     letter-spacing: 1px;
+    font-weight: bold;
 }
 
 
 
 .divBody .divVolContainer .divPagination{
-    /* background: red; */
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -185,15 +194,45 @@
     font-size: 20px;
     font-weight: bold;
     border-radius: 50%;
-    padding: 20px;
-    margin-right: 10px;
+    padding: 15px;
+    margin-right: 20px;
     cursor: pointer;
     transition: all ease .3s;
 }
 
 .divPagination span:hover{
-    background: #f05;
-    color: #FFF;
+    background: #8cff00;
+    /* color: #FFF; */
     transform: scale(.9);
 }
 
+
+
+
+
+/* ****************** */
+/* ***** FILTRES *** */
+/* **************** */
+.divFilters h2{
+    margin-bottom: 20px;
+}
+.divFilters .category{
+    margin-bottom: 20px;
+}
+
+.divFilters .category  h4{
+    margin-bottom: 5px;
+}
+
+
+.divFilters .category > div div{
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.divFilters .category > div div label{
+    letter-spacing: 1px;
+    margin-left: 10px;
+    cursor: pointer;
+}
