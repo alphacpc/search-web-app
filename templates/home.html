@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="divHeader">
+    <video  controls autoplay muted loop>
+        <source src="{{ url_for('static', filename='media/pub.mp4')}}" type="video/mp4">
+    </video>
+    <div class="divInfos">
+        <h1>Search web app</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam omnis fugiat ut sapiente animi distinctio fuga, aliquam at assumenda aliquid commodi minima repellendus id vel eius dignissimos facilis quis eligendi.
+        Consectetur cumque ipsum error! Atque quidem, tempora illo minima modi sit mollitia? Rerum, eaque incidunt eum temporibus, suscipit, rem earum assumenda commodi repudiandae in eos cum provident quasi doloremque qui!</p>
+        <form method="POST" >
+            <input type="text" placeholder="Recherche de vols...">
+        </form>
+    </div>
+</div>
+
+<div class="divBody">
+    <div class="divFilters">
+        <h2>Filters</h2>
+    </div>
+    <div class="divVolContainer">
+        <h2>Airpline</h2>
+
+        <div class="divVols">
+            {% for i in range(10) %}
+            <div class="divVolItem">
+                <div class="divImage">
+                    <img src="{{ url_for('static', filename='images/delta.png')}}" alt="vols">
+                </div>
+                <div class="volInformations">
+                    <h2>Delta Air Lines Inc.</h2>
+                    
+
+                    <div class="divTravel">
+                        <span>Atlanta</span>
+                        <img src="{{ url_for('static', filename='images/plane.svg')}}" alt="vols">
+                        <span>Birmingham</span>
+                    </div>
+
+                    <div class="timers">
+                        <div class="timer">
+                            <div>
+                                <h4>Départ Prévu</h4>
+                                <span>0:05:00</span>
+                            </div>
+                            <div>
+                                <h4>Heure de Départ</h4>
+                                <span>23:54:00</span>
+                            </div>
+                        </div>
+    
+                        <div class="timer">
+                            <div>
+                                <h4>Arrivée Prévue</h4>
+                                <span>04:30:00</span>
+                            </div>
+                            <div>
+                                <h4>Heure d'Arrivée</h4>
+                                <span>04:08:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p>Le 3 Février, 2015</p>
+
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="divPagination">
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+            <span>1</span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
