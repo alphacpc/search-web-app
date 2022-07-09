@@ -16,17 +16,12 @@ inputForm.addEventListener('keyup', async(e) => {
 })
 
 
-for(let input of inputFilters){
-    input.addEventListener('click', ()=>{
-        console.log(input.checked)
-    })
-}
 
 document.addEventListener("click", ()=>{
     let  checkers = []
     for(let input of inputFilters){
         if(input.checked){
-            checkers.push(input)
+            checkers.push(input.value)
         }
     }
     console.log("Checkers :", checkers)
