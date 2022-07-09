@@ -26,38 +26,43 @@ def get_month(num):
 
 with open("flights.csv", 'r') as file:
     csvreader = csv.DictReader(file)
+
+
     for row in csvreader:
 
-        print("-------HEURE DE DEPART---------")
-        heures_dep_prevu = row['SCHEDULED_DEPARTURE'][:2]
-        minutes_dep_prevu = row['SCHEDULED_DEPARTURE'][2:]
-        heures_dep = row['DEPARTURE_TIME'][:2]
-        minutes_dep = row['DEPARTURE_TIME'][2:]
+        # print("-------HEURE DE DEPART---------")
+        # time_dep_prevu = row['SCHEDULED_DEPARTURE'][:2] + ":" + row['SCHEDULED_DEPARTURE'][2:]
+        # time_dep = row['DEPARTURE_TIME'][:2] + ":" + row['DEPARTURE_TIME'][2:]
        
-        print("-------HEURE D'ARRIVEE---------")
-        heures_arr_prevu = row['SCHEDULED_ARRIVAL'][:2]
-        minutes_arr_prevu = row['SCHEDULED_ARRIVAL'][2:]
-        time_arr_prevu = row['SCHEDULED_ARRIVAL'][:2] + ":" + row['SCHEDULED_ARRIVAL'][2:]
-        print(time_arr_prevu)
+        # print("-------HEURE D'ARRIVEE---------")
+        # time_arr_prevu = row['SCHEDULED_ARRIVAL'][:2] + ":" + row['SCHEDULED_ARRIVAL'][2:]
+        # time_arr = row['ARRIVAL_TIME'][:2] + ":" + row['ARRIVAL_TIME'][2:]
 
-        heures_arr = row['ARRIVAL_TIME'][:2]
-        minutes_arr = row['ARRIVAL_TIME'][2:]
-        time_arr = row['ARRIVAL_TIME'][:2] + ":" + row['ARRIVAL_TIME'][2:]
-
-        print(time_arr)
-
-        print("-------VOL INFOS---------")
-        name_airline = get_airline(row['AIRLINE'])['AIRLINE']
-        image_airline = get_airline(row['AIRLINE'])['IMAGE']
-        origin_airport = get_airport(row['ORIGIN_AIRPORT'])['CITY']
-        destination_airport = get_airport(row['DESTINATION_AIRPORT'])['CITY']
-
-        month = get_month(row['MONTH'])
-        distance = row['DISTANCE']
-        year = row['YEAR']
-        day = row['DAY']
-        filght_number = row['FLIGHT_NUMBER']
+        # print("-------VOL INFOS---------")
+        # name_airline = get_airline(row['AIRLINE'])['AIRLINE']
+        # image_airline = get_airline(row['AIRLINE'])['IMAGE']
+        # origin_airport = get_airport(row['ORIGIN_AIRPORT'])['CITY']
+        # destination_airport = get_airport(row['DESTINATION_AIRPORT'])['CITY']
 
 
+        # flight_date_formated = "Le {} {}, {}".format(row['DAY'], get_month(row['MONTH']), row['YEAR'])
+        # flight_date = "{}.{}.{}".format(row['DAY'], row['MONTH'], row['YEAR'])
+
+        flight = {
+            "NUM_FLIGHT" : row['FLIGHT_NUMBER'],
+            "DEPART_PREVU" : time_dep_prevu, 
+            "DEPART" : time_dep,
+            "ARRIVE_PREVU" : time_arr_prevu, 
+            "ARRIVE" : time_arr, 
+            "DATE" : flight_date, 
+            "DATE_FORMATED" : flight_date_formated, 
+            "AIRLINE" : name_airline, 
+            "AIRLINE_PHOTO" : image_airline, 
+            "ORIGIN_AIRPORT" : origin_airport, 
+            "DESTINATION_AIRPORT" : destination_airport,
+            "DISTANCE" : row['DISTANCE']
+        }
+
+        
 
         break
