@@ -10,7 +10,7 @@
         <h1>Search web app</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam omnis fugiat ut sapiente animi distinctio fuga, aliquam at assumenda aliquid commodi minima repellendus id vel eius dignissimos facilis quis eligendi.
         Consectetur cumque ipsum error! Atque quidem, tempora illo minima modi sit mollitia? Rerum, eaque incidunt eum temporibus, suscipit, rem earum assumenda commodi repudiandae in eos cum provident quasi doloremque qui!</p>
-        <form method="POST" >
+        <form id="formSearch">
             <input type="search" placeholder="Recherche de vols...">
         </form>
     </div>
@@ -183,7 +183,7 @@
     <div class="divVolContainer">
 
         <div class="divVols">
-            {% for i in range(15) %}
+            {% for i in range(20) %}
             <div class="divVolItem">
                 <div class="divImage">
                     <img src="{{ url_for('static', filename='images/delta.png')}}" alt="vols">

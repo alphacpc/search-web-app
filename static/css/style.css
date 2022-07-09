@@ -40,9 +40,6 @@
     padding-top: 150px;
 }
 
-.divInfos{
-    /* background: rgb(8, 19, 140) !important; */
-}
 
 .divInfos h1{
     line-height: 40px;
@@ -90,6 +87,7 @@
     flex: 1;
     padding: 20px;
     border-radius: 8px;
+    height: 100vh;
 }
 
 .divBody .divVolContainer{

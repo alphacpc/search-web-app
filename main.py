@@ -1,5 +1,7 @@
 import csv
-from pprint import pprint
+
+flights = []
+flights_fields = ["NUM_FLIGHT", "DEPART_PREVU", "DEPART", "ARRIVE_PREVU", "ARRIVE", "DATE" , "DATE_FORMATED", "AIRLINE", "AIRLINE_PHOTO", "ORIGIN_AIRPORT", "DESTINATION_AIRPORT" , "DISTANCE"]
 
 def get_airline(code):
     with open("airlines.csv", 'r') as file:
@@ -11,6 +13,7 @@ def get_airport(airport):
     with open("airports.csv", 'r') as file:
         csvreader = csv.DictReader(file)
         return [item for item in csvreader if item.get('IATA_CODE') == airport][0]
+
 
 def get_month(num):
     months = [
@@ -31,24 +34,6 @@ with open("flights.csv", 'r') as file:
 
     for row in csvreader:
 
-        print("-------HEURE DE DEPART---------")
-        time_dep_prevu = row['SCHEDULED_DEPARTURE'][:2] + ":" + row['SCHEDULED_DEPARTURE'][2:]
-        time_dep = row['DEPARTURE_TIME'][:2] + ":" + row['DEPARTURE_TIME'][2:]
-       
-        print("-------HEURE D'ARRIVEE---------")
-        time_arr_prevu = row['SCHEDULED_ARRIVAL'][:2] + ":" + row['SCHEDULED_ARRIVAL'][2:]
-        time_arr = row['ARRIVAL_TIME'][:2] + ":" + row['ARRIVAL_TIME'][2:]
-
-        print("-------VOL INFOS---------")
-        # name_airline = get_airline(row['AIRLINE'])['AIRLINE']
-        # image_airline = get_airline(row['AIRLINE'])['IMAGE']
-        # origin_airport = get_airport(row['ORIGIN_AIRPORT'])['CITY']
-        # destination_airport = get_airport(row['DESTINATION_AIRPORT'])['CITY']
-
-
-        # flight_date_formated = "Le {} {}, {}".format(row['DAY'], get_month(row['MONTH']), row['YEAR'])
-        # flight_date = "{}.{}.{}".format(row['DAY'], row['MONTH'], row['YEAR'])
-
         flight = {
             "NUM_FLIGHT" : row['FLIGHT_NUMBER'],
             "DEPART_PREVU" : row['SCHEDULED_DEPARTURE'][:2] + ":" + row['SCHEDULED_DEPARTURE'][2:], 
@@ -64,7 +49,11 @@ with open("flights.csv", 'r') as file:
             "DISTANCE" : row['DISTANCE']
         }
 
-        pprint(flight)
+        flights.append(flight)
         
 
-        break
+with open("flights_transformed.csv", "w", encoding="UTF8", newline="") as file:
+    writer = csv.DictWriter(file, fieldnames = flights_fields)
+    writer.writeheader()
+    writer.writerows(flights)
+
