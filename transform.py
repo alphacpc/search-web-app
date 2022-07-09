@@ -16,7 +16,6 @@ def get_airport(airport):
         result = [item for item in csvreader if item.get('IATA_CODE') == airport]
 
         return result[0] if len(result) > 0 else None
-        # return [item for item in csvreader if item.get('IATA_CODE') == airport][0]
 
 
 def get_month(num):
@@ -57,7 +56,6 @@ with open("./data/flights.csv", 'r') as file:
 
         flights.append(flight)
 
-        break
 
 
 
