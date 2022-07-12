@@ -1,0 +1,247 @@
+*{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* *********************** */
+/* ***** DIV HEADER ***** */
+/* ********************* */
+
+.divHeader{
+    position: relative;
+    background: red;
+    width: 100%;
+    height: 60vh;
+}
+
+.divHeader video{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.divHeader .divInfos{
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    background: linear-gradient( #000000c5, #000000c8);
+    width: 100%;
+    height: 60vh;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    padding-top: 150px;
+}
+
+
+.divInfos h1{
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+.divInfos p{
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.divInfos form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.divInfos form input{
+    width: 60%;
+    padding: 15px 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    border: none;
+    outline: 0;
+}
+
+
+/* ******************* */
+/* ***** DIV BODY***** */
+/* ******************* */
+.divBody{
+    background: #F0EBE3; 
+    /* height: 30vh; */
+    padding: 50px 20px;
+    display: flex;
+}
+
+.divBody .divFilters{
+    background: #FFF;
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    height: 100vh;
+}
+
+.divBody .divVolContainer{
+    /* background: rgb(255, 145, 0); */
+    flex: 4 ;
+    padding: 0 20px;
+
+}
+
+
+.divVolContainer .divVols{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.divVols p.paragraph{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.divVolItem{
+    width: 269px;
+    background: #FFF;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.divVolItem:nth-child(5n){
+    margin-right: 0px;
+    margin-left: 3px;
+}
+
+.divVolItem img{
+    width: 100%;
+}
+
+.divVolItem .divImage img{
+    height: 150px;
+    object-fit: cover;
+}
+
+.divVolItem .volInformations{
+    padding: 15px 10px;
+}
+
+.divVolItem h2{
+    height: 55px;
+}
+
+.divVolItem .divTravel{
+    background: #8cff00;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 0 5px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 #000000c5;
+}
+
+.divVolItem .divTravel img{
+    width: 30px;
+}
+
+.divVolItem .timers{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 10px; */
+}
+
+.divVolItem .timers .timer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.divVolItem .timers .timer div h4{
+    color: #464645;
+    font-size: 14px;
+}
+
+.divVolItem .timers .timer div span{
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.divVolItem .volInformations p{
+    text-align: end;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+
+
+.divBody .divVolContainer .divPagination{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.divPagination span{
+    background: #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.divPagination span:hover{
+    background: #8cff00;
+    /* color: #FFF; */
+    transform: scale(.9);
+}
+
+
+
+
+
+/* ****************** */
+/* ***** FILTRES *** */
+/* **************** */
+.divFilters h2{
+    margin-bottom: 20px;
+}
+.divFilters .category{
+    margin-bottom: 20px;
+}
+
+.divFilters .category  h4{
+    margin-bottom: 5px;
+}
+
+
+.divFilters .category > div div{
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.divFilters .category > div div label{
+    letter-spacing: 1px;
+    margin-left: 10px;
+    cursor: pointer;
+}
